@@ -44,4 +44,12 @@ class Rack::TestCase < Test::Unit::TestCase
     assert last_response.body.match(expected),
       "expected last_response body to include #{expected}"
   end
+
+  # Asserts that the session contains a +key+ with +value+.
+  def assert_session(key, value)
+    session = last_request.env["rack.session"]
+    flunk "expected session to not be nil" if session.nil?
+    flunk "expected session to have key '#{key}'" unless session.keys.include?(key)
+    flunk "expected session[#{key}] to be '#{value}', but was '#{session[key]}'" unless session[key] == value
+  end
 end

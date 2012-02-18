@@ -5,3 +5,4 @@ Bundler.setup
 $:.push File.dirname(__FILE__)
 
 require 'sinatra/base'
+require 'linkedin'
