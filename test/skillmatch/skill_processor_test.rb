@@ -21,6 +21,17 @@ module Skillmatch
       assert has_only_ruby_connections?(actual)
     end
 
+    test "returns all connections if no term is given" do
+      connections = [
+        ruby_skilled_connection,
+        non_ruby_skilled_connection, ruby_rails_skilled_connection
+      ]
+
+      actual = match_skill_for('', connections)
+
+      assert_equal connections, actual
+    end
+
     test "does not return connections under skill match threshold" do
       actual = match_skill_for("Ruby", [
         ruby_skilled_connection,
