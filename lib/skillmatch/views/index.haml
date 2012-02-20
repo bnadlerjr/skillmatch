@@ -1,1 +1,5 @@
-%p Index template
+%h1 Skillmatch
+- unless authorized?
+  %a(href="/auth") Sign-In with LinkedIn
+- else
+  %a(href="/auth/logout") Logout

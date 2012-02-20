@@ -9,6 +9,8 @@ module Skillmatch
     set :linkedin_api_key, ENV['LINKEDIN_API_KEY']
     set :linkedin_api_secret, ENV['LINKEDIN_API_SECRET']
 
+    helpers Skillmatch::LinkedInHelper
+
     enable :sessions
 
     get '/' do
