@@ -18,8 +18,6 @@ module Skillmatch
     end
 
     get '/auth' do
-      client = LinkedIn::Client.new(settings.linkedin_api_key, settings.linkedin_api_secret)
-
       request_token = client.request_token(:oauth_callback =>
         "http://#{request.host}:#{request.port}/auth/callback")
 
@@ -31,7 +29,6 @@ module Skillmatch
 
     get '/auth/callback' do
       if session[:atoken].nil?
-        client = LinkedIn::Client.new(settings.linkedin_api_key, settings.linkedin_api_secret)
         pin = params[:oauth_verifier]
         session[:atoken], session[:asecret] =
           client.authorize_from_request(session[:rtoken], session[:rsecret], pin)

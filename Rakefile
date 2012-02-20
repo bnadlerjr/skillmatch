@@ -6,7 +6,7 @@ require "roodi_task"
 require "flay_task"
 require "flog_task"
 
-DEFAULT_TASKS    = %w[test flog flay reek]
+DEFAULT_TASKS    = %w[test flog flay]
 EXTRA_RDOC_FILES = ['README.rdoc']
 LIB_FILES        = Dir["lib/**/*.rb"]
 MAIN_RDOC        = 'README.rdoc'

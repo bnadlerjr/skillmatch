@@ -13,7 +13,7 @@ module Skillmatch
 
       assert_response :ok
       assert_content_type :html
-      assert_body_includes('Index template')
+      assert_body_includes('Skillmatch')
     end
 
     test 'authenticate' do

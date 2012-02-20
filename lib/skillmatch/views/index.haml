@@ -3,3 +3,7 @@
   %a(href="/auth") Sign-In with LinkedIn
 - else
   %a(href="/auth/logout") Logout
+%form
+  %input(id="term" type="text" name="term")
+  %input(type="submit" value="Search Connections")
+%ul#results
