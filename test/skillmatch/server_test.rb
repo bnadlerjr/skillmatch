@@ -16,6 +16,32 @@ module Skillmatch
       assert_body_includes('Skillmatch')
     end
 
+    test 'get connections with skills that match search term' do
+      client = mock('LinkedIn::Client')
+      client.expects(:connections)
+        .with(:fields => %w(id first-name last-name skills))
+        .returns({"all" => [
+          {"first_name"=>"Jim",
+           "id"=>"oRtv",
+           "last_name"=>"Beam",
+           "skills"=>
+            {"total"=>1, "all"=>[{"id"=>1, "skill"=>{"name"=>"Ruby"}}]}
+          }
+        ]})
+
+      LinkedIn::Client.stubs(:new).returns(client)
+
+      expected = '[{"first_name":"Jim","id":"oRtv","last_name":"Beam",' +
+        '"skills":{"total":1,"all":[{"id":1,"skill":{"name":"Ruby"}}]},' +
+        '"similarity":1.0}]'
+
+      get '/search?term=ruby'
+
+      assert_response :ok
+      assert_content_type :json
+      assert_equal expected, last_response.body
+    end
+
     test 'authenticate' do
       request_token = mock('OAuth::RequestToken',
         :token         => 'my_token',

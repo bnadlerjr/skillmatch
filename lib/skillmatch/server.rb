@@ -13,8 +13,18 @@ module Skillmatch
 
     enable :sessions
 
+    include Skillmatch::SkillProcessor
+
     get '/' do
       haml :index
+    end
+
+    get '/search' do
+      content_type :json
+      connections = client.connections(
+        :fields => %w(id first-name last-name skills))["all"]
+
+      match_skill_for(params[:term], connections).to_json
     end
 
     get '/auth' do
