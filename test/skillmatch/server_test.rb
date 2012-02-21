@@ -17,9 +17,15 @@ module Skillmatch
     end
 
     test 'get connections with skills that match search term' do
+      fields = [
+        'id', 'first-name', 'last-name', 'skills', 'public-profile-url',
+        'picture-url'
+      ]
+
       client = mock('LinkedIn::Client')
+      client.expects(:authorize_from_access).with(nil, nil)
       client.expects(:connections)
-        .with(:fields => %w(id first-name last-name skills))
+        .with(:fields => fields)
         .returns({"all" => [
           {"first_name"=>"Jim",
            "id"=>"oRtv",

@@ -21,9 +21,14 @@ module Skillmatch
 
     get '/search' do
       content_type :json
-      connections = client.connections(
-        :fields => %w(id first-name last-name skills))["all"]
+      client.authorize_from_access(session[:atoken], session[:asecret])
 
+      fields = [
+        'id', 'first-name', 'last-name', 'skills', 'public-profile-url',
+        'picture-url'
+      ]
+
+      connections = client.connections(:fields => fields)["all"]
       match_skill_for(params[:term], connections).to_json
     end
 
