@@ -1,8 +1,23 @@
-%h1 Skillmatch
-- unless authorized?
-  %a(href="/auth") Sign-In with LinkedIn
-- else
-  %a(href="/auth/logout") Logout
-  %input(id="term" type="text" name="term")
-  %button(id="search")Search Connections
-  %ul#results
+#header
+  - unless authorized?
+    %a(href="/auth") Sign-In with LinkedIn
+  - else
+    %a(href="/auth/logout") Logout
+  #mast-head
+    %h1 Skillmatch
+    - if authorized?
+      %div
+        %input(id="term" type="text" name="term")
+        %button(id="search")Search Connections
+
+#content
+  - unless authorized?
+    %p.center This is a sample app that demonstrates using the LinkedIn API with Sinatra. You'll need to <a href="/auth">authenticate with LinkedIn</a> to use it.
+  - else
+    %ul#results
+      %li
+        %p.center Enter a skill above and the LinkedIn API will be used to search for connections for with that skill.
+
+#footer
+  %p Copyright &copy; 2012 <a href="http://bobnadler.com">Bob Nadler, Jr.</a> (The MIT License)
+  %p Source code available on <a href="">GitHub</a>.

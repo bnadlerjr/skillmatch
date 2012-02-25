@@ -10,6 +10,7 @@ group :development do
   gem "rake", "~> 0.9.2"
   gem "rdoc", "~> 3.6.1"
   gem "sass", "~> 3.1.3"
+  gem 'sprockets', '~> 2.0'
 end
 
 group :test do
