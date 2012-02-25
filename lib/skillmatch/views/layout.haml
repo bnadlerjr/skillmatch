@@ -3,34 +3,9 @@
   %head
     %title Skillmatch
     %meta{ :name => 'author', :content => 'Bob Nadler, Jr. <bnadlerjr@gmail.com>' }
-    %link{:rel => 'stylesheet', :type => 'text/css', :href => './css/styles.css'}/
+    %link(href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700italic' rel='stylesheet' type='text/css')/
+    %link{:rel => 'stylesheet', :type => 'text/css', :href => './assets/styles.css'}/
     %script(type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js")
-    :javascript
-      $(document).ready(function () {
-        function skillList(skills) {
-          return $.map(skills["all"], function(value) {
-            return value["skill"]["name"];
-          }).join(', ');
-        }
-
-        function renderResults(data) {
-          var items = [];
-          $.each(data, function(key, value) {
-            var fullName = value["first_name"] + ' ' + value["last_name"];
-            items.push('<li id="' + value["id"] + '">' +
-              '<img src="' + value["picture_url"] + '" />' +
-              '<h2>' + fullName + '<span>(' + Math.floor(value["similarity"] * 100) + '% match)</span>' + '</h2>' +
-              '<p>' + skillList(value["skills"]) + '</p>' +
-              '<a href="' + value["public_profile_url"] + '" style="text-decoration:none;"><span style="font: 80% Arial,sans-serif; color:#0783B6;"><img src="http://www.linkedin.com/img/webpromo/btn_in_20x15.png" width="20" height="15" alt="View ' + fullName + '\'s LinkedIn profile" style="vertical-align:middle" border="0">View ' + fullName + '\'s profile</span></a>' +
-              '</li>');
-          });
-          $("#results").empty().append(items.join(''));
-        }
-
-        $("#search").click(function () {
-          var term = $("#term").val();
-          $.getJSON('/search?term=' + term, renderResults);
-        });
-      });
+    %script(type="text/javascript" src="./assets/app.js")
   %body
     = yield

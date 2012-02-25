@@ -1,0 +1,133 @@
+@import "./reset.scss";
+@import "./mixins.scss";
+
+/* Main
+---------------------------------------------------------------------------- */
+html { font-size:100.01%; }
+
+body {
+    background: #e6e6e6;
+    font-size: 80%;
+    font-family: helvetica, arial, sans-serif;
+    line-height: 1.5em;
+    margin: 0 auto;
+    width: 640px;
+}
+
+a {
+    &:link, &:visited, &:active {
+        color: #069;
+        text-decoration: none;
+    }
+
+    &:hover { text-decoration: underline; }
+}
+
+button {
+    @include linear-gradient(#73aec9, #0571a6);
+    border: 1px solid #045a8b;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+    padding: 0.5em;
+}
+
+    button:hover {
+        @include linear-gradient(#5a8193, #1e4d72);
+        cursor: pointer;
+    }
+
+h1, h2 { font-weight: normal; }
+
+h1 {
+    font-size: 3em;
+    line-height: 1;
+}
+
+h2 {
+    font-size: 1.75em;
+    span {
+        color: #666;
+        font-size: 0.6em;
+    }
+}
+
+input {
+    font-size: 1.5em;
+    vertical-align: bottom;
+    width: 12em;
+}
+
+p {
+    font-size: 1.25em;
+    line-height: 1.5em;
+}
+
+#header {
+    @include linear-gradient(#fefefe, #ececec);
+    border-bottom: 1px solid #959595;
+    overflow: auto;
+    padding: 1em;
+
+    a {
+        display: block;
+        float: right;
+    }
+
+    #mast-head {
+        clear: both;
+        margin-top: 1.75em;
+        div {
+            display: inline;
+            float: right;
+            margin-top: 0.5em;
+        }
+        h1 {
+            color: #045a8b;
+            display: inline;
+            font-family: 'Droid Serif', serif;
+        }
+    }
+}
+
+#content {
+    background-color: #fff;
+    clear: both;
+    padding: 0 1em 1em 1em;
+
+    ul {
+        background-color: #fff;
+
+        li {
+            border-bottom: 1px solid #CCC;
+            padding: 1.5em;
+
+            .profile-pic {
+                @include outer-glow;
+                border: 2px solid #069;
+                float: left;
+                margin-right: 1em;
+            }
+
+            p {
+                font-size: 1.25em;
+                margin-bottom: 1.5em;
+                padding-top: 1em;
+            }
+        }
+
+    }
+
+    .center {
+        margin: 0 8em;
+        padding-top: 1.5em;
+        text-align: center;
+    }
+}
+
+#footer {
+    color: #999;
+    font-size: 80%;
+    padding-top: 1.5em;
+    text-align: center;
+}

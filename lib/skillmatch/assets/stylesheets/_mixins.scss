@@ -1,0 +1,99 @@
+$defaultBorderRadius: 5px;
+$useIEFilters: 0; // 0 == false; 1 == true
+
+/* Border Radius
+---------------------------------------------------------------------------- */
+@mixin border-radius($values: $defaultBorderRadius) {
+  -moz-border-radius: $values;
+  -webkit-border-radius: $values;
+  border-radius: $values;
+}
+
+@mixin border-corner-radius($radius, $vert_pos, $horiz_pos) {
+  $top-left: 0; $top-right: 0; $bottom-right: 0; $bottom-left: 0;
+  @if $vert_pos == 'top' {
+    @if $horiz_pos == 'left' {
+      $top-left: $radius;
+    } @else {
+      $top-right: $radius;
+    }
+  } @else {
+    @if $horiz_pos == 'left' {
+      $bottom-left: $radius;
+    } @else {
+      $bottom-right: $radius;
+    }
+  }
+
+  @include border-radius($top-left $top-right $bottom-right $bottom-left);
+}
+
+@mixin border-top-radius($radius: $defaultBorderRadius) {
+  @include border-radius($radius $radius 0 0);
+}
+
+@mixin border-top-left-radius($radius: $defaultBorderRadius) {
+  @include border-corner-radius($radius, 'top', 'left');
+}
+
+@mixin border-top-right-radius($radius: $defaultBorderRadius) {
+  @include border-corner-radius($radius, 'top', 'right');
+}
+
+@mixin border-bottom-radius($radius: $defaultBorderRadius) {
+  @include border-bottom-left-radius($radius);
+  @include border-bottom-right-radius($radius);
+}
+
+@mixin border-bottom-left-radius($radius: $defaultBorderRadius) {
+  @include border-corner-radius($radius, 'bottom', 'left');
+}
+
+@mixin border-bottom-right-radius($radius: $defaultBorderRadius) {
+  @include border-corner-radius($radius, 'bottom', 'right');
+}
+
+@mixin border-left-radius($radius: $defaultBorderRadius) {
+  @include border-top-left-radius($radius);
+  @include border-bottom-left-radius($radius);
+}
+
+@mixin border-right-radius($radius: $defaultBorderRadius) {
+  @include border-top-right-radius($radius);
+  @include border-bottom-right-radius($radius);
+}
+
+/* Box Shadow
+---------------------------------------------------------------------------- */
+@mixin box-shadow($values, $hex, $ie: $useIEFilters) {
+  -moz-box-shadow: $values $hex;
+  -o-box-shadow: $values $hex;
+  -webkit-box-shadow: $values $hex;
+  box-shadow: $values $hex;
+
+  @if $useIEFilters == 1 {
+    filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=0px, OffY=0px, Color='#ffffff');
+    -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=0px, OffY=0px, Color='#ffffff')";
+  }
+}
+
+@mixin outer-glow($x: 0, $y: 0, $blur: 7px, $color: rgba(0, 0, 0, 0.4)) {
+  @include box-shadow($x $y $blur, $color);
+}
+
+@mixin outer-glow-over {
+  @include box-shadow(0 0 7px, rgba(0, 0, 0, 0.7));
+}
+
+/* Gradient
+---------------------------------------------------------------------------- */
+@mixin linear-gradient($from, $to, $ie: $useIEFilters) {
+  background-color: $to;
+  background-image: -moz-linear-gradient(top, $from, $to);
+  background-image: -webkit-gradient(linear,left top,left bottom,color-stop(0, $from),color-stop(1, $to));
+
+  @if $useIEFilters == 1 {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}');
+    -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$from}', endColorstr='#{$to}')";
+  }
+}
