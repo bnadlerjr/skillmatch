@@ -16,8 +16,25 @@
   - else
     %ul#results
       %li
-        %p.center Enter a skill above and the LinkedIn API will be used to search for connections for with that skill.
+        %p.center Enter a skill above to find connections that have that skill using the LinkedIn API.
 
 #footer
   %p Copyright &copy; 2012 <a href="http://bobnadler.com">Bob Nadler, Jr.</a> (The MIT License)
   %p Source code available on <a href="https://github.com/bnadlerjr/skillmatch">GitHub</a>.
+
+-#templates
+%script(type="text/tmpl" id="cnn")
+  :plain
+    <li id="<%= cnn['id'] %>">
+      <img class="profile-pic" src="<%= cnn['picture_url'] %>" />
+      <div>
+        <h2><%= cnn['full_name'] %><span> (<%= cnn['formatted_similarity'] %>% match)</span></h2>
+        <a href="<%= cnn['public_profile_url'] %>" style="text-decoration:none;">
+          <span style="font: 80% Arial,sans-serif; color:#0783B6;">
+            <img src="http://www.linkedin.com/img/webpromo/btn_in_20x15.png" width="20" height="15" alt="View <%= cnn['full_name'] %>'s LinkedIn profile" style="vertical-align:middle" border="0" />
+            View <%= cnn['full_name'] %>'s profile
+          </span>
+        </a>
+        <p><%= cnn['skill_list'] %></p>
+      </div>
+    </li>
