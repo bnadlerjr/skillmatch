@@ -5,13 +5,13 @@ gem "haml", "~> 3.1.3"
 gem "json", "~> 1.6.5"
 gem "linkedin", "~> 0.3.6"
 gem "sinatra", "~> 1.3.1"
+gem 'sprockets', '~> 2.0'
 gem "thin", "~> 1.3.1"
 
 group :development do
   gem "rake", "~> 0.9.2"
   gem "rdoc", "~> 3.6.1"
   gem "sass", "~> 3.1.3"
-  gem 'sprockets', '~> 2.0'
 end
 
 group :test do
