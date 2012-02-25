@@ -1,7 +1,12 @@
 = Skillmatch
-Demo Sinatra app that shows integration with the LinkedIn API. Relies on the {linkedin gem}[https://rubygems.org/gems/linkedin]. Allows you to search through your LinkedIn connections looking for connections that have skills related to your search term.
+Demo Sinatra app that shows integration with the LinkedIn API. Relies on the
+{linkedin gem}[https://rubygems.org/gems/linkedin]. Allows you to search
+through your LinkedIn connections looking for connections that have skills
+related to your search term. A working example can be found at
+http://skillmatch.herokuapp.com
 
-Since this is just a demo, the search algorithm is *very* naive; it uses the Jaro Winkler method provided by the {amatch gem}[https://rubygems.org/gems/amatch].
+Since this is just a demo, the search algorithm is *very* naive; it uses the
+Jaro Winkler method provided by the {amatch gem}[https://rubygems.org/gems/amatch].
 
 Author:: Bob Nadler, Jr. (bnadlerjr@gmail.com)
 
