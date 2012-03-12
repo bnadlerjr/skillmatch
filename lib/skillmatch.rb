@@ -6,6 +6,5 @@ $:.push File.dirname(__FILE__)
 
 require 'sinatra/base'
 require 'json'
-require 'linkedin'
-require 'skillmatch/linkedin_helper'
+require 'sinatra-linkedin'
 require 'skillmatch/skill_processor'

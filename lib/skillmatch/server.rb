@@ -3,13 +3,13 @@ require File.join(File.dirname(__FILE__), '../skillmatch')
 module Skillmatch
   # The main application server.
   class Server < Sinatra::Base
+    register Sinatra::Linkedin
+
     set :app_file, __FILE__
     set :public_folder, Proc.new { File.join(root, '../public') }
 
     set :linkedin_api_key, ENV['LINKEDIN_API_KEY']
     set :linkedin_api_secret, ENV['LINKEDIN_API_SECRET']
-
-    helpers Skillmatch::LinkedInHelper
 
     enable :sessions
 
