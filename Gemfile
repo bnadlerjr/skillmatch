@@ -3,8 +3,8 @@ source 'http://rubygems.org'
 gem "amatch", "~> 0.2.10"
 gem "haml", "~> 3.1.3"
 gem "json", "~> 1.6.5"
-gem "sinatra-linkedin", '~> 0.0.1'
-gem "sinatra", "~> 1.3.1"
+gem "sinatra-linkedin", '~> 0.1.1'
+gem "sinatra", "~> 1.4.3"
 gem 'sprockets', '~> 2.0'
 gem "thin", "~> 1.3.1"
 
