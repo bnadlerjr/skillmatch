@@ -16,12 +16,12 @@ end
 
 group :test do
   gem "contest", "~> 0.1.3"
-  gem "flay", "~> 1.4.3"
-  gem "flog", "~> 2.5.3"
+  gem "flay", "~> 2.4.0"
+  gem "flog", "~> 4.2.0"
   gem "launchy", "~> 2.0.5"
   gem "mocha", "~> 0.14.0", :require => false
   gem "rack-test", "~> 0.6.1"
-  gem "reek", "~> 1.2.8"
+  gem "reek", "~> 1.3.6"
   gem "roodi", "~> 2.1.0"
   gem "simplecov", "~> 0.5.4", :require => false
 end
