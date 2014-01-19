@@ -23,7 +23,7 @@ group :test do
   gem "rack-test", "~> 0.6.1"
   gem "reek", "~> 1.3.6"
   gem "roodi", "~> 2.1.0"
-  gem "simplecov", "~> 0.5.4", :require => false
+  gem "simplecov", "~> 0.8.2", :require => false
 end
 
 group :production do
