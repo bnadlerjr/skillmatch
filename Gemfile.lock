@@ -1,7 +1,7 @@
 GEM
   remote: http://rubygems.org/
   specs:
-    addressable (2.2.8)
+    addressable (2.3.5)
     amatch (0.2.11)
       tins (~> 0.3)
     contest (0.1.3)
@@ -18,8 +18,8 @@ GEM
     hashie (2.0.5)
     hike (1.2.3)
     json (1.6.8)
-    launchy (2.0.5)
-      addressable (~> 2.2.6)
+    launchy (2.4.2)
+      addressable (~> 2.3)
     linkedin (0.4.6)
       hashie (>= 1.2, < 2.1)
       multi_json (~> 1.0)
@@ -84,7 +84,7 @@ DEPENDENCIES
   flog (~> 4.2.0)
   haml (~> 3.1.3)
   json (~> 1.6.5)
-  launchy (~> 2.0.5)
+  launchy (~> 2.4.2)
   mocha (~> 0.14.0)
   rack-test (~> 0.6.1)
   rake (~> 10.1.1)
