@@ -18,7 +18,7 @@ GEM
       tilt
     hashie (2.0.5)
     hike (1.2.3)
-    json (1.6.8)
+    json (1.8.1)
     launchy (2.4.2)
       addressable (~> 2.3)
     linkedin (0.4.6)
@@ -84,7 +84,7 @@ DEPENDENCIES
   flay (~> 2.4.0)
   flog (~> 4.2.0)
   haml (~> 4.0.5)
-  json (~> 1.6.5)
+  json (~> 1.8.1)
   launchy (~> 2.4.2)
   mocha (~> 0.14.0)
   rack-test (~> 0.6.1)
