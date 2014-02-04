@@ -10,6 +10,8 @@ Jaro Winkler method provided by the {amatch gem}[https://rubygems.org/gems/amatc
 
 Author:: Bob Nadler, Jr. (bnadlerjr@gmail.com)
 
+{<img src="https://gemnasium.com/bnadlerjr/skillmatch.png" alt="Dependency Status" />}[https://gemnasium.com/bnadlerjr/skillmatch]
+
 == Notes / Use
 Install dependencies using Bundler:
     bundle install
