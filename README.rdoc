@@ -1,4 +1,7 @@
 = Skillmatch
+{<img src="https://gemnasium.com/bnadlerjr/skillmatch.png" alt="Dependency Status" />}[https://gemnasium.com/bnadlerjr/skillmatch]
+{<img src="https://travis-ci.org/bnadlerjr/skillmatch.png?branch=master" alt="Build Status" />}[https://travis-ci.org/bnadlerjr/skillmatch]
+
 Demo Sinatra app that shows integration with the LinkedIn API. Relies on the
 {linkedin gem}[https://rubygems.org/gems/linkedin]. Allows you to search
 through your LinkedIn connections looking for connections that have skills
@@ -9,8 +12,6 @@ Since this is just a demo, the search algorithm is *very* naive; it uses the
 Jaro Winkler method provided by the {amatch gem}[https://rubygems.org/gems/amatch].
 
 Author:: Bob Nadler, Jr. (bnadlerjr@gmail.com)
-
-{<img src="https://gemnasium.com/bnadlerjr/skillmatch.png" alt="Dependency Status" />}[https://gemnasium.com/bnadlerjr/skillmatch]
 
 == Notes / Use
 Install dependencies using Bundler:
