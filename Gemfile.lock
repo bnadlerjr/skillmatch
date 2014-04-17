@@ -2,8 +2,8 @@ GEM
   remote: http://rubygems.org/
   specs:
     addressable (2.3.5)
-    amatch (0.2.11)
-      tins (~> 0.3)
+    amatch (0.3.0)
+      tins (~> 1.0)
     contest (0.1.3)
     daemons (1.1.9)
     docile (1.1.2)
@@ -73,13 +73,13 @@ GEM
       eventmachine (>= 1.0.0)
       rack (>= 1.0.0)
     tilt (1.4.1)
-    tins (0.13.1)
+    tins (1.1.0)
 
 PLATFORMS
   ruby
 
 DEPENDENCIES
-  amatch (~> 0.2.10)
+  amatch (~> 0.3.0)
   contest (~> 0.1.3)
   flay (~> 2.4.0)
   flog (~> 4.2.0)
