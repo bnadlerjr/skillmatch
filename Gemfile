@@ -4,7 +4,7 @@ gem "amatch", "~> 0.3.0"
 gem "haml", "~> 4.0.5"
 gem "json", "~> 1.8.1"
 gem "sinatra-linkedin", '~> 0.1.1'
-gem "sinatra", "~> 1.4.3"
+gem "sinatra", "~> 1.4.5"
 gem 'sprockets', '~> 2.12.1'
 gem "thin", "~> 1.6.2"
 

@@ -7,7 +7,7 @@ class Rack::TestCase < Test::Unit::TestCase
   include Rack::Test::Methods
 
   CONTENT_TYPES = {
-    :json => "application/json;charset=utf-8",
+    :json => "application/json",
     :html => "text/html;charset=utf-8"
   }
 
