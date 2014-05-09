@@ -9,7 +9,7 @@ gem 'sprockets', '~> 2.12.1'
 gem "thin", "~> 1.6.2"
 
 group :development do
-  gem "rake", "~> 10.1.1"
+  gem "rake", "~> 10.3.1"
   gem "rdoc", "~> 4.1.1"
   gem "sass", "~> 3.2.14"
 end
