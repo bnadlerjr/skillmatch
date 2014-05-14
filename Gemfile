@@ -19,7 +19,7 @@ group :test do
   gem "flay", "~> 2.4.0"
   gem "flog", "~> 4.2.0"
   gem "launchy", "~> 2.4.2"
-  gem "mocha", "~> 1.0.0", :require => false
+  gem "mocha", "~> 1.1.0", :require => false
   gem "rack-test", "~> 0.6.1"
   gem "reek", "~> 1.3.6"
   gem "roodi", "~> 3.3.1"
