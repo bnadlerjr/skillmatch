@@ -11,7 +11,7 @@ gem "thin", "~> 1.6.2"
 group :development do
   gem "rake", "~> 10.3.2"
   gem "rdoc", "~> 4.1.1"
-  gem "sass", "~> 3.2.14"
+  gem "sass", "~> 3.3.7"
 end
 
 group :test do
