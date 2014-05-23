@@ -1,6 +1,7 @@
 = Skillmatch
 {<img src="https://gemnasium.com/bnadlerjr/skillmatch.png" alt="Dependency Status" />}[https://gemnasium.com/bnadlerjr/skillmatch]
 {<img src="https://travis-ci.org/bnadlerjr/skillmatch.png?branch=master" alt="Build Status" />}[https://travis-ci.org/bnadlerjr/skillmatch]
+{<img src="https://codeclimate.com/github/bnadlerjr/skillmatch.png" alt="Code Climate" />}[https://codeclimate.com/github/bnadlerjr/skillmatch]
 
 Demo Sinatra app that shows integration with the LinkedIn API. Relies on the
 {linkedin gem}[https://rubygems.org/gems/linkedin]. Allows you to search
