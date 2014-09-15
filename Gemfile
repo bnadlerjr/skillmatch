@@ -10,7 +10,7 @@ gem "thin", "~> 1.6.2"
 
 group :development do
   gem "rake", "~> 10.3.2"
-  gem "rdoc", "~> 4.1.1"
+  gem "rdoc", "~> 4.1.2"
   gem "sass", "~> 3.4.4"
 end
 
