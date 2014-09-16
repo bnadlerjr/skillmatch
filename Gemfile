@@ -21,7 +21,7 @@ group :test do
   gem "launchy", "~> 2.4.2"
   gem "mocha", "~> 1.1.0", :require => false
   gem "rack-test", "~> 0.6.1"
-  gem "reek", "~> 1.3.7"
+  gem "reek", "~> 1.3.8"
   gem "roodi", "~> 4.0.0"
   gem "simplecov", "~> 0.9.0", :require => false
 end
