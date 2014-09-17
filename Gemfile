@@ -16,8 +16,8 @@ end
 
 group :test do
   gem "contest", "~> 0.1.3"
-  gem "flay", "~> 2.4.0"
-  gem "flog", "~> 4.2.0"
+  gem "flay", "~> 2.5.0"
+  gem "flog", "~> 4.3.0"
   gem "launchy", "~> 2.4.2"
   gem "mocha", "~> 1.1.0", :require => false
   gem "rack-test", "~> 0.6.1"
