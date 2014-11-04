@@ -5,7 +5,7 @@ gem "haml", "~> 4.0.5"
 gem "json", "~> 1.8.1"
 gem "sinatra-linkedin", '~> 0.1.1'
 gem "sinatra", "~> 1.4.5"
-gem 'sprockets', '~> 2.12.2'
+gem 'sprockets', '~> 2.12.3'
 gem "thin", "~> 1.6.2"
 
 group :development do
