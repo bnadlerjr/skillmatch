@@ -6,7 +6,7 @@ gem "json", "~> 1.8.1"
 gem "sinatra-linkedin", '~> 0.1.1'
 gem "sinatra", "~> 1.4.5"
 gem 'sprockets', '~> 2.12.3'
-gem "thin", "~> 1.6.2"
+gem "thin", "~> 1.6.3"
 
 group :development do
   gem "rake", "~> 10.3.2"
