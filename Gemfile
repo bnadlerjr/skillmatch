@@ -22,7 +22,7 @@ group :test do
   gem "mocha", "~> 1.1.0", :require => false
   gem "rack-test", "~> 0.6.3"
   gem "reek", "~> 1.6.4"
-  gem "roodi", "~> 4.0.0"
+  gem "roodi", "~> 4.1.1"
   gem "simplecov", "~> 0.9.1", :require => false
 end
 
