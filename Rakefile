@@ -43,6 +43,5 @@ end
 
 Reek::Rake::Task.new do |t|
   t.fail_on_error = true
-  t.reek_opts = "--quiet"
   t.verbose = false
 end
