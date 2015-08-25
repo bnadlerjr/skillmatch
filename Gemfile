@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
 gem "amatch", "~> 0.3.0"
-gem "haml", "~> 4.0.6"
+gem "haml", "~> 4.0.7"
 gem "json", "~> 1.8.2"
 gem "sinatra-linkedin", '~> 0.1.1'
 gem "sinatra", "~> 1.4.6"
